@@ -19,15 +19,16 @@
 			<section id="header">
 				<header>
 					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
-					<h1 id="logo"><a href="#">Ezezaguna</a></h1>
-					<br/>
+					<h1 id="logo"><a href="#">Willis Corto</a></h1>
+					<p>I got reprogrammed by a rogue AI<br />
+					and now I'm totally cray</p>
 				</header>
 				<nav id="nav">
 					<ul>
-						<li><a href="index.html" class="active">Hasiera</a></li>
-						<li><a href="login.html">Login</a></li>
-						<li><a href="register.html">Erregistratu</a></li>
-						<li><a href="contact.html">Kontaktua</a></li>
+						<li><a href="/">Hasiera</a></li>
+						<li><a href="login">Login</a></li>
+						<li><a href="register">Erregistratu</a></li>
+						<li><a href="contact" class="active">Kontaktua</a></li>
 					</ul>
 				</nav>
 				<footer>
@@ -43,22 +44,45 @@
 
 		<!-- Wrapper -->
 			<div id="wrapper">
-
 				<!-- Main -->
 					<div id="main">
-
-						<!-- One -->
 							<section id="one">
 								<div class="container">
-									<header class="major">
-										<h2>HASIERA</h2>
-										<p>Liburu baten balorazioa emateko.</p>
-									</header>
-									<p>Liburutegi bateko liburu bat aurkitu eta baloratzeko aukera.<br/>
-									Liburutegi batean gehien baloratu diren hamar liburuak erakutsi</p>
+									<h3>Erregistratu</h3>
+									<form method="post" action="#">
+										<div class="row uniform">
+											<div class="12u"><input type="text" name="nick" id="nick" placeholder="Nick" /></div>
+										</div>
+										<div class="row uniform">
+											<div class="12u"><input type="text" name="izena" id="izena" placeholder="Izena" /></div>
+										</div>
+										<div class="row uniform">
+											<div class="6u 12u(xsmall)"><input type="text" name="abizena1" id="abizena1" placeholder="1go abizena" /></div>
+											<div class="6u 12u(xsmall)"><input type="text" name="abizena2" id="abizena2" placeholder="2go abizena" /></div>
+										</div>
+										<div class="row uniform">
+											<div class="12u"><input type="password" name="pasahitza1" id="pasahitza1" placeholder="Pasahitza" /></div>
+										</div>
+										<div class="row uniform">
+											<div class="12u"><input type="password" name="pasahitza2" id="pasahitza2" placeholder="Sartu pasahitz berdina" /></div>
+										</div>
+										<div class="row uniform">
+											<div class="12u"><input type="text" name="eposta" id="eposta" placeholder="Eposta" /></div>
+										</div>
+										<div class="row uniform">
+											<div class="12u">
+												<ul class="actions">
+													<li><input type="submit" class="special" value="Erregistratu" /></li>
+													<li><input type="reset" value="Reset" /></li>
+												</ul>
+											</div>
+										</div>
+									</form>
 								</div>
 							</section>
+
 					</div>
+
 				<!-- Footer -->
 					<section id="footer">
 						<div class="container">

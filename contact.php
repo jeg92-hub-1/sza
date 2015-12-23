@@ -25,10 +25,10 @@
 				</header>
 				<nav id="nav">
 					<ul>
-						<li><a href="index.html">Hasiera</a></li>
-						<li><a href="login.html">Login</a></li>
-						<li><a href="register.html">Erregistratu</a></li>
-						<li><a href="contact.html" class="active">Kontaktua</a></li>
+						<li><a href="">Hasiera</a></li>
+						<li><a href="login">Login</a></li>
+						<li><a href="register">Erregistratu</a></li>
+						<li><a href="contact" class="active">Kontaktua</a></li>
 					</ul>
 				</nav>
 				<footer>

@@ -1,0 +1,7 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteBase /sza/
+RewriteRule ^/$ index.php[L]
+RewriteRule ^/login$ login.php[L]
+RewriteRule ^register$ register.php[L]
+RewriteRule ^contact$ contact.php[L]

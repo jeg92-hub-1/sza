@@ -25,10 +25,10 @@
 				</header>
 				<nav id="nav">
 					<ul>
-						<li><a href="index.html">Hasiera</a></li>
-						<li><a href="login.html">Login</a></li>
-						<li><a href="register.html">Erregistratu</a></li>
-						<li><a href="contact.html" class="active">Kontaktua</a></li>
+						<li><a href="/">Hasiera</a></li>
+						<li><a href="login">Login</a></li>
+						<li><a href="register">Erregistratu</a></li>
+						<li><a href="contact" class="active">Kontaktua</a></li>
 					</ul>
 				</nav>
 				<footer>
@@ -48,31 +48,19 @@
 					<div id="main">
 							<section id="one">
 								<div class="container">
-									<h3>Erregistratu</h3>
+									<h3>Login</h3>
+									<p>Nick edo eposta baten bidez logeatu.</p>
 									<form method="post" action="#">
 										<div class="row uniform">
-											<div class="12u"><input type="text" name="nick" id="nick" placeholder="Nick" /></div>
+											<div class="12u"><input type="text" name="nick" id="nick" placeholder="Nick/eposta" /></div>
 										</div>
 										<div class="row uniform">
-											<div class="12u"><input type="text" name="izena" id="izena" placeholder="Izena" /></div>
-										</div>
-										<div class="row uniform">
-											<div class="6u 12u(xsmall)"><input type="text" name="abizena1" id="abizena1" placeholder="1go abizena" /></div>
-											<div class="6u 12u(xsmall)"><input type="text" name="abizena2" id="abizena2" placeholder="2go abizena" /></div>
-										</div>
-										<div class="row uniform">
-											<div class="12u"><input type="password" name="pasahitza1" id="pasahitza1" placeholder="Pasahitza" /></div>
-										</div>
-										<div class="row uniform">
-											<div class="12u"><input type="password" name="pasahitza2" id="pasahitza2" placeholder="Sartu pasahitz berdina" /></div>
-										</div>
-										<div class="row uniform">
-											<div class="12u"><input type="text" name="eposta" id="eposta" placeholder="Eposta" /></div>
+											<div class="12u"><input type="password" name="pasahitza" id="pasahitza" placeholder="Pasahitza" /></div>
 										</div>
 										<div class="row uniform">
 											<div class="12u">
 												<ul class="actions">
-													<li><input type="submit" class="special" value="Erregistratu" /></li>
+													<li><input type="submit" class="special" value="Login" /></li>
 													<li><input type="reset" value="Reset" /></li>
 												</ul>
 											</div>

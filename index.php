@@ -19,16 +19,15 @@
 			<section id="header">
 				<header>
 					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
-					<h1 id="logo"><a href="#">Willis Corto</a></h1>
-					<p>I got reprogrammed by a rogue AI<br />
-					and now I'm totally cray</p>
+					<h1 id="logo"><a href="#">Ezezaguna</a></h1>
+					<br/>
 				</header>
 				<nav id="nav">
 					<ul>
-						<li><a href="index.html">Hasiera</a></li>
-						<li><a href="login.html">Login</a></li>
-						<li><a href="register.html">Erregistratu</a></li>
-						<li><a href="contact.html" class="active">Kontaktua</a></li>
+						<li><a href="/" class="active">Hasiera</a></li>
+						<li><a href="login">Login</a></li>
+						<li><a href="register">Erregistratu</a></li>
+						<li><a href="contact">Kontaktua</a></li>
 					</ul>
 				</nav>
 				<footer>
@@ -44,33 +43,22 @@
 
 		<!-- Wrapper -->
 			<div id="wrapper">
+
 				<!-- Main -->
 					<div id="main">
+
+						<!-- One -->
 							<section id="one">
 								<div class="container">
-									<h3>Login</h3>
-									<p>Nick edo eposta baten bidez logeatu.</p>
-									<form method="post" action="#">
-										<div class="row uniform">
-											<div class="12u"><input type="text" name="nick" id="nick" placeholder="Nick/eposta" /></div>
-										</div>
-										<div class="row uniform">
-											<div class="12u"><input type="password" name="pasahitza" id="pasahitza" placeholder="Pasahitza" /></div>
-										</div>
-										<div class="row uniform">
-											<div class="12u">
-												<ul class="actions">
-													<li><input type="submit" class="special" value="Login" /></li>
-													<li><input type="reset" value="Reset" /></li>
-												</ul>
-											</div>
-										</div>
-									</form>
+									<header class="major">
+										<h2>HASIERA</h2>
+										<p>Liburu baten balorazioa emateko.</p>
+									</header>
+									<p>Liburutegi bateko liburu bat aurkitu eta baloratzeko aukera.<br/>
+									Liburutegi batean gehien baloratu diren hamar liburuak erakutsi</p>
 								</div>
 							</section>
-
 					</div>
-
 				<!-- Footer -->
 					<section id="footer">
 						<div class="container">
