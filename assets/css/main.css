@@ -1764,7 +1764,6 @@
 		-moz-appearance: none;
 		-webkit-appearance: none;
 		-ms-appearance: none;
-		appearance: none;
 		border-radius: 5px;
 		border: none;
 		border: solid 2px #e4e4e4;
@@ -1776,13 +1775,6 @@
 		width: 100%;
 	}
 
-		input[type="text"]:invalid,
-		input[type="password"]:invalid,
-		input[type="email"]:invalid,
-		select:invalid,
-		textarea:invalid {
-			box-shadow: none;
-		}
 
 		input[type="text"]:focus,
 		input[type="password"]:focus,
@@ -1813,7 +1805,7 @@
 			display: block;
 			height: 2.75em;
 			line-height: 2.75em;
-			pointer-events: none;
+			/*pointer-events: none;*/
 			position: absolute;
 			right: 0;
 			text-align: center;
@@ -1841,7 +1833,7 @@
 		-moz-appearance: none;
 		-webkit-appearance: none;
 		-ms-appearance: none;
-		appearance: none;
+		/*appearance: none;*/
 		display: block;
 		float: left;
 		margin-right: -2em;
@@ -2170,7 +2162,7 @@
 				margin-left: -1.125em;
 				padding: 0;
 				table-layout: fixed;
-				width: calc(100% + 1.125em);
+				/*width: calc(100% + 1.125em);*/
 			}
 
 				ul.actions.fit li {
@@ -2184,7 +2176,7 @@
 
 				ul.actions.fit.small {
 					margin-left: -0.5625em;
-					width: calc(100% + 0.5625em);
+					/*width: calc(100% + 0.5625em);*/
 				}
 
 					ul.actions.fit.small li {
@@ -2272,7 +2264,7 @@
 		-moz-appearance: none;
 		-webkit-appearance: none;
 		-ms-appearance: none;
-		appearance: none;
+		/*appearance: none;*/
 		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -2563,7 +2555,8 @@
 	}
 
 		#main > section > .container {
-			padding: 6em 0 4em 0;
+			/*container goiko tartea txikitzeko*/
+			padding:3em 0 4em 0;
 		}
 
 		#main > section:first-child {
@@ -2650,7 +2643,9 @@
 		/* Main */
 
 			#main > section > .container {
-				padding: 4em 0 2em 0;
+				
+			/*container goiko tartea txikitzeko*/
+				padding: 2em 0 2em 0;
 			}
 
 	}
@@ -2950,6 +2945,8 @@
 		/* Main */
 
 			#main > section > .container {
+				
+			/*container goiko tartea txikitzeko*/
 				padding: 2em 0 0 0;
 			}
 

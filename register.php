@@ -19,16 +19,15 @@
 			<section id="header">
 				<header>
 					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
-					<h1 id="logo"><a href="#">Willis Corto</a></h1>
-					<p>I got reprogrammed by a rogue AI<br />
-					and now I'm totally cray</p>
+					<h1 id="logo"><a href="#">Ezezaguna</a></h1>
+					<br/>
 				</header>
 				<nav id="nav">
 					<ul>
-						<li><a href="/">Hasiera</a></li>
-						<li><a href="login">Login</a></li>
-						<li><a href="register">Erregistratu</a></li>
-						<li><a href="contact" class="active">Kontaktua</a></li>
+						<li><a href="index.php">Hasiera</a></li>
+						<li><a href="login.php">Login</a></li>
+						<li><a href="register.php" class="active">Erregistratu</a></li>
+						<li><a href="contact.php">Kontaktua</a></li>
 					</ul>
 				</nav>
 				<footer>

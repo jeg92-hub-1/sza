@@ -24,10 +24,10 @@
 				</header>
 				<nav id="nav">
 					<ul>
-						<li><a href="/" class="active">Hasiera</a></li>
-						<li><a href="login">Login</a></li>
-						<li><a href="register">Erregistratu</a></li>
-						<li><a href="contact">Kontaktua</a></li>
+						<li><a href="index.php" class="active">Hasiera</a></li>
+						<li><a href="login.php">Login</a></li>
+						<li><a href="register.php">Erregistratu</a></li>
+						<li><a href="contact.php">Kontaktua</a></li>
 					</ul>
 				</nav>
 				<footer>
