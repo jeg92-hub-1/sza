@@ -5,8 +5,9 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+<?php include 'data/php/sesioa.php';?>
 	<head>
-		<title>Read Only by HTML5 UP</title>
+		<title>Liburutegia</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -17,19 +18,10 @@
 
 		<!-- Header -->
 			<section id="header">
-				<header>
-					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
-					<h1 id="logo"><a href="#">Ezezaguna</a></h1>
-					<br/>
-				</header>
-				<nav id="nav">
-					<ul>
-						<li><a href="index.php" class="active">Hasiera</a></li>
-						<li><a href="login.php">Login</a></li>
-						<li><a href="register.php">Erregistratu</a></li>
-						<li><a href="contact.php">Kontaktua</a></li>
-					</ul>
-				</nav>
+				<?php
+					showProfile();
+					mainMenua();
+				?>
 				<footer>
 					<ul class="icons">
 						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
@@ -52,10 +44,10 @@
 								<div class="container">
 									<header class="major">
 										<h2>HASIERA</h2>
-										<p>Liburu baten balorazioa emateko.</p>
+										<p>Ongi etorri EHUko liburutegiaren webgunera</p>
 									</header>
-									<p>Liburutegi bateko liburu bat aurkitu eta baloratzeko aukera.<br/>
-									Liburutegi batean gehien baloratu diren hamar liburuak erakutsi</p>
+									<p>Liburu bat bilatu eta baloratzeko aukera.<br/>
+									Baloratu gabe dagoen liburu bat gehitzeko aukera</p>
 								</div>
 							</section>
 					</div>

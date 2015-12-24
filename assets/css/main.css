@@ -3058,3 +3058,11 @@
 			}
 
 	}
+	
+	#nav ul li:hover{
+		background-color:white;
+	}
+	#header a:hover {
+    color: #989898 !important;
+	}
+	

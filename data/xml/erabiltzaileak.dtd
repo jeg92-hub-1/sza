@@ -1,6 +1,6 @@
 <?xml encoding="UTF-8"?>
 <!ELEMENT erabiltzaileak (erabiltzailea)+>
-<!ELEMENT erabiltzailea (izena,abizenak,eposa,pasahitza)>
+<!ELEMENT erabiltzailea (izena,abizenak,eposta,pasahitza)>
 <!ATTLIST erabiltzailea id ID #REQUIRED>
 <!ELEMENT izena (#PCDATA)>
 <!ELEMENT abizenak (#PCDATA)>

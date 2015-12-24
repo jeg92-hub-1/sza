@@ -5,8 +5,9 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+<?php include 'data/php/sesioa.php';?>
 	<head>
-		<title>Read Only by HTML5 UP</title>
+		<title>Liburutegia</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -17,19 +18,10 @@
 
 		<!-- Header -->
 			<section id="header">
-				<header>
-					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
-					<h1 id="logo"><a href="#">Ezezaguna</a></h1>
-					<br/>
-				</header>
-				<nav id="nav">
-					<ul>
-						<li><a href="index.php">Hasiera</a></li>
-						<li><a href="login.php">Login</a></li>
-						<li><a href="register.php" class="active">Erregistratu</a></li>
-						<li><a href="contact.php">Kontaktua</a></li>
-					</ul>
-				</nav>
+				<?php
+					showProfile();
+					mainMenua();
+				?>
 				<footer>
 					<ul class="icons">
 						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
@@ -56,8 +48,7 @@
 											<div class="12u"><input type="text" name="izena" id="izena" placeholder="Izena" /></div>
 										</div>
 										<div class="row uniform">
-											<div class="6u 12u(xsmall)"><input type="text" name="abizena1" id="abizena1" placeholder="1go abizena" /></div>
-											<div class="6u 12u(xsmall)"><input type="text" name="abizena2" id="abizena2" placeholder="2go abizena" /></div>
+											<div class="12u"><input type="text" name="abizenak" id="abizenak" placeholder="Abizenak" /></div>
 										</div>
 										<div class="row uniform">
 											<div class="12u"><input type="password" name="pasahitza1" id="pasahitza1" placeholder="Pasahitza" /></div>
@@ -77,6 +68,9 @@
 											</div>
 										</div>
 									</form>
+									<?php
+										
+									?>
 								</div>
 							</section>
 

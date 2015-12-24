@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Read Only by HTML5 UP</title>
+		<title>Liburutegia</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -24,9 +24,10 @@
 				</header>
 				<nav id="nav">
 					<ul>
-						<li><a href="index.php">Hasiera</a></li>
-						<li><a href="login.php" class="active">Login</a></li>
+						<li><a href="index.php" class="active">Hasiera</a></li>
+						<li><a href="login.php">Login</a></li>
 						<li><a href="register.php">Erregistratu</a></li>
+						<li><a href="contact.php">Kontaktua</a></li>
 					</ul>
 				</nav>
 				<footer>
@@ -42,33 +43,22 @@
 
 		<!-- Wrapper -->
 			<div id="wrapper">
+
 				<!-- Main -->
 					<div id="main">
+
+						<!-- One -->
 							<section id="one">
 								<div class="container">
-									<h3>Login</h3>
-									<p>Nick edo eposta baten bidez logeatu.</p>
-									<form method="post" action="#">
-										<div class="row uniform">
-											<div class="12u"><input type="text" name="nick" id="nick" placeholder="Nick/eposta" /></div>
-										</div>
-										<div class="row uniform">
-											<div class="12u"><input type="password" name="pasahitza" id="pasahitza" placeholder="Pasahitza" /></div>
-										</div>
-										<div class="row uniform">
-											<div class="12u">
-												<ul class="actions">
-													<li><input type="submit" class="special" value="Login" /></li>
-													<li><input type="reset" value="Reset" /></li>
-												</ul>
-											</div>
-										</div>
-									</form>
+									<header class="major">
+										<h2>HASIERA</h2>
+										<p>Liburu baten balorazioa emateko.</p>
+									</header>
+									<p>Liburutegi bateko liburu bat aurkitu eta baloratzeko aukera.<br/>
+									Liburutegi batean gehien baloratu diren hamar liburuak erakutsi</p>
 								</div>
 							</section>
-
 					</div>
-
 				<!-- Footer -->
 					<section id="footer">
 						<div class="container">

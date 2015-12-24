@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Read Only by HTML5 UP</title>
+		<title>Liburutegia</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -24,10 +24,10 @@
 				</header>
 				<nav id="nav">
 					<ul>
-						<li><a href="index.php">Hasiera</a></li>
+						<li><a href="index.php" class="active">Hasiera</a></li>
 						<li><a href="login.php">Login</a></li>
 						<li><a href="register.php">Erregistratu</a></li>
-						<li><a href="contact.php" class="active">Kontaktua</a></li>
+						<li><a href="contact.php">Kontaktua</a></li>
 					</ul>
 				</nav>
 				<footer>
@@ -43,37 +43,22 @@
 
 		<!-- Wrapper -->
 			<div id="wrapper">
+
 				<!-- Main -->
 					<div id="main">
+
+						<!-- One -->
 							<section id="one">
 								<div class="container">
-									<h3>Contact Me</h3>
-									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
-									<form method="post" action="#">
-										<div class="row uniform">
-											<div class="6u 12u(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
-											<div class="6u 12u(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										</div>
-										<div class="row uniform">
-											<div class="12u"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
-										</div>
-										<div class="row uniform">
-											<div class="12u"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
-										</div>
-										<div class="row uniform">
-											<div class="12u">
-												<ul class="actions">
-													<li><input type="submit" class="special" value="Send Message" /></li>
-													<li><input type="reset" value="Reset Form" /></li>
-												</ul>
-											</div>
-										</div>
-									</form>
+									<header class="major">
+										<h2>HASIERA</h2>
+										<p>Liburu baten balorazioa emateko.</p>
+									</header>
+									<p>Liburutegi bateko liburu bat aurkitu eta baloratzeko aukera.<br/>
+									Liburutegi batean gehien baloratu diren hamar liburuak erakutsi</p>
 								</div>
 							</section>
-
 					</div>
-
 				<!-- Footer -->
 					<section id="footer">
 						<div class="container">
