@@ -5,23 +5,31 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-<?php include 'data/php/sesioa.php';?>
 	<head>
 		<title>Liburutegia</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script type="text/javascript" src="assets/js/nirejs.js"></script>	
 	</head>
-	<body>
+	<body onload="erabiltzailearenNickaErakutsi('login')">
 
 		<!-- Header -->
 			<section id="header">
-				<?php
-					showProfile();
-					mainMenua();
-				?>
+				<header>
+					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
+					<h1 id="logo"><a href="#">Ezezaguna</a></h1>
+					<br/>
+				</header>
+				
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Hasiera</a></li>
+						<li><a href="login.html" class="active">Login</a></li>
+						<li><a href="register.html">Erregistratu</a></li>
+					</ul>
+				</nav>
 				<footer>
 					<ul class="icons">
 						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
@@ -39,41 +47,29 @@
 					<div id="main">
 							<section id="one">
 								<div class="container">
-									<h3>Erregistratu</h3>
-									<form method="post" action="#">
+									<h3>Login</h3>
+									<p>Nick edo eposta baten bidez logeatu.</p>
+									<form action="php/login_prozesatu.php"  method="POST">
 										<div class="row uniform">
-											<div class="12u"><input type="text" name="nick" id="nick" placeholder="Nick" /></div>
+											<div class="12u"><input type="text" name="nick" id="nick" placeholder="Nick/eposta" /></div>
 										</div>
 										<div class="row uniform">
-											<div class="12u"><input type="text" name="izena" id="izena" placeholder="Izena" /></div>
-										</div>
-										<div class="row uniform">
-											<div class="12u"><input type="text" name="abizenak" id="abizenak" placeholder="Abizenak" /></div>
-										</div>
-										<div class="row uniform">
-											<div class="12u"><input type="password" name="pasahitza1" id="pasahitza1" placeholder="Pasahitza" /></div>
-										</div>
-										<div class="row uniform">
-											<div class="12u"><input type="password" name="pasahitza2" id="pasahitza2" placeholder="Sartu pasahitz berdina" /></div>
-										</div>
-										<div class="row uniform">
-											<div class="12u"><input type="text" name="eposta" id="eposta" placeholder="Eposta" /></div>
+											<div class="12u"><input type="password" name="pasahitza" id="pasahitza" placeholder="Pasahitza" onchange="loginEgiaztatzen()" /></div>
 										</div>
 										<div class="row uniform">
 											<div class="12u">
 												<ul class="actions">
-													<li><input type="submit" class="special" value="Erregistratu" /></li>
+													<li><input type="submit" class="special" value="Login" /></li>
 													<li><input type="reset" value="Reset" /></li>
 												</ul>
 											</div>
 										</div>
 									</form>
-									<?php
-										
-									?>
+									<div id="mezua">
+
+									</div>
 								</div>
 							</section>
-
 					</div>
 
 				<!-- Footer -->
@@ -94,7 +90,7 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+			<script src="assets/js/main.js"></script>	
 
 	</body>
 </html>

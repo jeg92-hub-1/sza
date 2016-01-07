@@ -12,22 +12,22 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script type="text/javascript" src="assets/js/nirejs.js"></script>
 	</head>
-	<body>
+	<body onload="erabiltzailearenNickaErakutsi('index')">
 
 		<!-- Header -->
 			<section id="header">
 				<header>
 					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
-					<h1 id="logo"><a href="#">Ezezaguna</a></h1>
+					<h1 id="logo"><a href="#" id="erabNick">Ezezaguna</a></h1>
 					<br/>
 				</header>
 				<nav id="nav">
 					<ul>
-						<li><a href="/" class="active">Hasiera</a></li>
-						<li><a href="login">Login</a></li>
-						<li><a href="register">Erregistratu</a></li>
-						<li><a href="contact">Kontaktua</a></li>
+						<li><a href="index.html" class="active">Hasiera</a></li>
+						<li><a href="login.html" >Login</a></li>
+						<li><a href="register.html">Erregistratu</a></li>
 					</ul>
 				</nav>
 				<footer>
@@ -59,7 +59,7 @@
 								</div>
 							</section>
 					</div>
-					<section id="footer"> 	<!-- Footer -->
+					<div id="mainfooter">
 						<div class="container">
 							<ul class="copyright">
 								<li>
@@ -74,7 +74,7 @@
 								<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>
 						</div>
-					</section>
+					</div>
 			</div>
 
 		<!-- Scripts -->

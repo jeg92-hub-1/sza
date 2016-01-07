@@ -6,14 +6,15 @@
 -->
 <html>
 	<head>
-		<title>Read Only by HTML5 UP</title>
+		<title>Liburutegia</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script type="text/javascript" src="assets/js/nirejs.js"></script>
 	</head>
-	<body>
+	<body onload="erabiltzailearenNickaErakutsi('erabiltzailea')">
 
 		<!-- Header -->
 			<section id="header">
@@ -24,9 +25,11 @@
 				</header>
 				<nav id="nav">
 					<ul>
-						<li><a href="index.php">Hasiera</a></li>
-						<li><a href="login.php" class="active">Login</a></li>
-						<li><a href="register.php">Erregistratu</a></li>
+						<li><a href="erabiltzailea.html" class="active">Hasiera</a></li>
+						<li><a href="liburuakIkusi.html">Liburuak Ikusi</a></li>
+						<li><a href="liburuakSartu.html">Liburuak Sartu</a></li>
+						<li><a href="liburuakBaloratu.html">Liburuak Baloratu</a></li>
+						<li><a href="logout.html">Logout</a></li>
 					</ul>
 				</nav>
 				<footer>
@@ -44,42 +47,37 @@
 			<div id="wrapper">
 				<!-- Main -->
 					<div id="main">
+
+						<!-- One -->
 							<section id="one">
 								<div class="container">
-									<h3>Login</h3>
-									<p>Nick edo eposta baten bidez logeatu.</p>
-									<form method="post" action="#">
-										<div class="row uniform">
-											<div class="12u"><input type="text" name="nick" id="nick" placeholder="Nick/eposta" /></div>
-										</div>
-										<div class="row uniform">
-											<div class="12u"><input type="password" name="pasahitza" id="pasahitza" placeholder="Pasahitza" /></div>
-										</div>
-										<div class="row uniform">
-											<div class="12u">
-												<ul class="actions">
-													<li><input type="submit" class="special" value="Login" /></li>
-													<li><input type="reset" value="Reset" /></li>
-												</ul>
-											</div>
-										</div>
-									</form>
+									<header class="major">
+										<h2>HASIERA</h2>
+										<p>Liburu baten balorazioa emateko.</p>
+									</header>
+									<p>Liburutegi bateko liburu bat aurkitu eta baloratzeko aukera.<br/>
+									Liburutegi batean gehien baloratu diren hamar liburuak erakutsi</p>
 								</div>
 							</section>
-
 					</div>
-
-				<!-- Footer -->
-					<section id="footer">
+					<div id="mainfooter"> 	<!-- Footer -->
 						<div class="container">
 							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>
+									<a href="http://jigsaw.w3.org/css-validator/check/referer">
+										 <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="¡CSS Válido!" /></a>
+								</li>
+								<li>
+									<a href="http://jigsaw.w3.org/css-validator/check/referer">
+										<img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="¡CSS Válido!" />
+									</a>
+								</li>
+								<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>
 						</div>
-					</section>
-
+					<div id="mainfooter">
 			</div>
-
+			
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollzer.min.js"></script>
@@ -88,6 +86,5 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>

@@ -2578,7 +2578,7 @@
 
 /* Footer */
 
-	#footer {
+	#mainfooter {
 		background: #fafafa;
 		border-top: 0;
 		color: #c0c0c0;
@@ -2586,13 +2586,13 @@
 		padding: 4em 0 2em 0;
 	}
 
-		#footer .copyright {
+		#mainfooter .copyright {
 			line-height: 1em;
 			list-style: none;
 			padding: 0;
 		}
 
-			#footer .copyright li {
+			#mainfooter .copyright li {
 				border-left: solid 1px #d4d4d4;
 				display: inline-block;
 				font-size: 0.8em;
@@ -2600,13 +2600,13 @@
 				padding-left: 1em;
 			}
 
-				#footer .copyright li:first-child {
+				#mainfooter .copyright li:first-child {
 					border-left: 0;
 					margin-left: 0;
 					padding-left: 0;
 				}
 
-				#footer .copyright li a {
+				#mainfooter .copyright li a {
 					color: inherit;
 				}
 
@@ -2958,11 +2958,11 @@
 
 		/* Footer */
 
-			#footer {
+			#mainfooter {
 				text-align: center;
 			}
 
-				#footer .copyright li {
+				#mainfooter .copyright li {
 					border-left: 0;
 					display: block;
 					line-height: 1.75em;
@@ -2970,7 +2970,7 @@
 					padding-left: 0;
 				}
 
-					#footer .copyright li:first-child {
+					#mainfooter .copyright li:first-child {
 						margin-top: 0;
 					}
 
