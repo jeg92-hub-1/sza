@@ -15,7 +15,7 @@
 		<script type="text/javascript" src="assets/js/nirejs.js"></script>
 
 	</head>
-	<body onload="liburuakIkusi()">
+	<body>
 
 		<!-- Header -->
 			<section id="header">
@@ -27,8 +27,8 @@
 				<nav id="nav">
 					<ul>
 						<li><a href="erabiltzailea.html">Hasiera</a></li>
-						<li><a href="liburuakIkusi.html" class="active">Liburuak Ikusi</a></li>
-						<li><a href="liburuakSartu.html">Liburuak Sartu</a></li>
+						<li><a href="liburuakIkusi.html">Liburuak Ikusi</a></li>
+						<li><a href="liburuakSartu.html" class="active">Liburuak Sartu</a></li>
 						<li><a href="liburuakBaloratu.html">Liburuak Baloratu</a></li>
 						<li><a href="logout.html">Logout</a></li>
 					</ul>
@@ -54,15 +54,58 @@
 							<section id="one">
 								<div class="container">
 									<header class="major">
-										<h2>LIBURUAK IKUSI</h2>
-										<p>Liburutegian dauden liburuak erakutsi</p>
+										<h2>LIBURUAK SARTU</h2>
+										<p>Liburu berriak liburutegian gehitu</p>
 									</header>
-									<div id="liburuak" style="margin-left:-150px; overflow: auto;height:500px;width:65em">
+									<form method="POST" onsubmit="sartuLiburua()">
+										<div class="row uniform">
+											<div class="6u 12u(xsmall)"><input type="text" name="isbn" id="isbn" onchange="isbnKonprobatzen(this,1)" placeholder="ISBN"    required title="12 digitu!"  pattern="[0-9]{12}" required/></div>
+											<div class="6u 12u(xsmall)">
+												<select name="cb_hizkuntza" id="hizkuntza" placeholder="Hizkuntza">
+													<option selected value="-">- - Hizkuntza aukeratu - -</option>
+													<option value="eus">Euskara</option>
+													<option value="es">Gaztelera</option>
+													<option value="en">Ingelesa</option>
+													<option value="cat">Katalana</option>
+												</select>
+											</div>
+										</div>
+										<div class="row uniform">
+											<div class="12u"><input type="text" name="izenburua" id="izenburua" placeholder="Izenburua" required /></div>
+										</div>
+										<div class="row uniform">
+											<div class="12u"><input type="text" name="egilea" id="egilea" placeholder="Egilea" required /></div>
+										</div>
+										<div class="row uniform">
+											<div class="12u"><input type="url" name="portada" id="portada" placeholder="Portada (url bat sartu)" pattern="https?://.+" title="Include http://" required/></div>
+										</div>
+										<div class="row uniform">
+											<div class="12u"><input type="text" name="argitaletxea" id="argitaletxea" placeholder="Argitaletxea" required /></div>
+										</div>
+										<div class="row uniform">
+											<div class="6u 12u(xsmall)"><input type="text" name="urtea" id="urtea" placeholder="Urtea"  pattern="\d*" required /></div>
+											<div class="6u 12u(xsmall)"><input type="text" name="gaia" id="gaia" placeholder="Gaia" required /></div>
+										</div>
+										<div class="row uniform">
+											<div class="12u">
+												<textarea name="sinopsia" id="sinopsia" placeholder="Sinopsia" style="resize:none" required ></textarea>
+											</div>
+										</div>
+										<div class="row uniform">
+											<div class="12u">
+												<ul class="actions">
+													<li><input type="submit" id="sartubtn" class="special" value="Sartu" /></li>
+													<li><input type="reset" value="Reset" onclick="isbnKonprobatzen(0,0)"/></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+									<div id="mezua">
 									</div>
 								</div>
 							</section>
 					</div>
-					<section id="footer"> 	<!-- Footer -->
+					<div id="mainfooter"> 	<!-- Footer -->
 						<div class="container">
 							<ul class="copyright">
 								<li>
@@ -77,7 +120,7 @@
 								<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>
 						</div>
-					</section>
+					</div>
 			</div>
 
 		<!-- Scripts -->
