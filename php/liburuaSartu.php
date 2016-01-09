@@ -66,9 +66,19 @@
 		$liburua->addchild('urtea',$urtea);
 		$liburua->addchild('gaia',$gaia);
 		$liburua->addchild('sinopsia',$sinopsia);
-		$liburua->addchild('balorazioa',0);
-		$liburuak->asXML('../xml/liburuak.xml');
-		echo "sartutako liburua ondo gorde da!";
+		$liburua->addchild('balorazioa');
+		$liburua->balorazioa->addAttribute('batazbestekoa',0);
+		$liburua->balorazioa->addchild('puntuazioa',0);
+		
+		
+		$gordeDA = $liburuak->asXML('../xml/liburuak.xml');
+		
+		if($gordeDA){
+			echo "sartutako liburua ondo gorde da!";
+		}else{
+			echo "errorea gordetzerakoan, saiatu berriro";
+		}
+		
 	}
 
 ?>
