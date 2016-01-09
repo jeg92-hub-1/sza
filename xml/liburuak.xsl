@@ -3,18 +3,19 @@
 
 	<xsl:template match="/">
 	<xsl:for-each select="liburutegia/liburua">
+		<xsl:sort select="balorazioa/@batazbestekoa" data-type="number" order="descending"/>
 		<table border="1" style="font-size:0.8em;text-align:center">
 		<thead style="background-color:grey;color:white">
 			<tr>
 				<td>ISBN</td>
 				<td>HIZKUNTZA</td>
-				<td>IZENBURU</td>
+				<td>IZENBURUA</td>
 				<td>EGILEA</td>
-				<td>Portada</td>
+				<td>PORTADA</td>
 				<td>ARGITALETXEA</td>
 				<td>URTEA</td>
 				<td>GAIA</td>
-				<td>SIPNOSIA</td>
+				<td>SINOPSIA</td>
 				<td>BALORAZIOA</td>
 			</tr>
 		</thead>
@@ -36,7 +37,7 @@
 					<td><xsl:value-of select="urtea"/></td>
 					<td><xsl:value-of select="gaia"/></td>
 					<td><xsl:value-of select="sinopsia"/></td>
-					<td><xsl:value-of select="balorazioa"/></td>
+					<td><xsl:value-of select="balorazioa/@batazbestekoa"/></td>
 				</tr>
 			
 		  </tbody>
