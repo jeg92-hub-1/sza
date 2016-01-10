@@ -119,9 +119,70 @@ function liburuaBaloratu(){
 	XMLHttpRequestObject.open("POST", "php/liburuaBaloratu.php", true);
 	XMLHttpRequestObject.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	XMLHttpRequestObject.send("selectedLiburua="+selectedLiburua+"&balorazioa="+balorazioa);
+}
 
+function nickaKonprobatu(nick){
+	if(nick.value != ""){
+		XMLHttpRequestObject.onreadystatechange=function(){
+			if ((XMLHttpRequestObject.readyState==4)&&(XMLHttpRequestObject.status==200)){		
+				var existitzenDa = XMLHttpRequestObject.responseText;
+				$(document).ready( function() {$('#mezua').delay(1000).fadeIn();});	
+				if(existitzenDa=="0"){
+					document.getElementById("mezua").innerHTML="<p style='color:red'>Nicka existitzen da</p>";
+					$(document).ready( function() {$('#mezua').delay(1000).fadeOut();});
+					document.getElementById("registerbtn").disabled= true;
+					document.getElementById("pasahitza1").disabled= true;
+					document.getElementById("pasahitza2").disabled= true;
+
+				}else{
+					document.getElementById("mezua").innerHTML="<p style='color:green'>Nick egokia</p>";
+					$(document).ready( function() {$('#mezua').delay(1000).fadeOut();});
+					document.getElementById("registerbtn").disabled= false;
+					document.getElementById("pasahitza1").disabled= false;
+					document.getElementById("pasahitza2").disabled= false;
+				}
+			}
+		}
+		
+		XMLHttpRequestObject.open("POST", "php/nickaKonprobatzen.php", true);
+		XMLHttpRequestObject.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		XMLHttpRequestObject.send("nick="+nick.value);
+	}
+}
+
+function pasahitzaKonprobatzen(){
+	var pasahitza1 = document.getElementById('pasahitza1').value;	
+	var pasahitza2 = document.getElementById('pasahitza2').value;
 	
+	if(pasahitza1 != pasahitza2){
+		$(document).ready( function() {$('#mezua').delay(1000).fadeIn();});
+		document.getElementById("mezua").innerHTML="<p style='color:red'>Bi pasahitzak berdinak izan behar dira!</p>";
+		$(document).ready( function() {$('#mezua').delay(1000).fadeOut();});
+		document.getElementById('pasahitza2').value="";
+		document.getElementById("registerbtn").disabled= true;
+	}else{
+		document.getElementById("registerbtn").disabled= false;
+	}
+}
+
+
+
+function erregistratu(){
+	var nick=document.getElementById('nick').value;
+	var izena=document.getElementById('izena').value;
+	var abizenak=document.getElementById('abizenak').value;
+	var pasahitza=document.getElementById('pasahitza2').value;
+	var eposta=document.getElementById('eposta').value;
+	XMLHttpRequestObject.onreadystatechange=function(){
+		if ((XMLHttpRequestObject.readyState==4)&&(XMLHttpRequestObject.status==200)){
+			alert(XMLHttpRequestObject.responseText);
+		}
+	}
 	
+	XMLHttpRequestObject.open("POST", "php/register_prozesatu.php", true);
+	XMLHttpRequestObject.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	XMLHttpRequestObject.send("nick="+nick+"&izena="+izena+"&abizenak="+abizenak+"&pasahitza="+pasahitza+"&eposta="+eposta);
+	//XMLHttpRequestObject.send("nick="+nick+"&izena="+izena+"&abizenak"+abizenak+"&pasahitza="+pasahitza+"&eposta="+eposta);
 }
 //Logeatuta bazaude index.html ko menuak eskuragai ez egoteko eta alderantziz,
 // logeatuta egon ezean erabiltzaileak.htmlko menuak eskuragai ez egoteko

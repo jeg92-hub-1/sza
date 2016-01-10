@@ -12,8 +12,9 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script type="text/javascript" src="assets/js/nirejs.js"></script>	
 	</head>
-	<body onload="erabiltzailearenNickaErakutsi('register')>
+	<body onload="erabiltzailearenNickaErakutsi('register')">
 
 		<!-- Header -->
 			<section id="header">
@@ -47,21 +48,21 @@
 							<section id="one">
 								<div class="container">
 									<h3>Erregistratu</h3>
-									<form method="post" action="php/erregistratu_prozesatu">
+									<form method="post" onsubmit="erregistratu()">
 										<div class="row uniform">
-											<div class="12u"><input type="text" name="nick" id="nick" placeholder="Nick" /></div>
+											<div class="12u"><input type="text" name="nick" id="nick" placeholder="Nick" required onchange="nickaKonprobatu(this)"/></div>
 										</div>
 										<div class="row uniform">
-											<div class="12u"><input type="text" name="izena" id="izena" placeholder="Izena" /></div>
+											<div class="12u"><input type="text" name="izena" id="izena" placeholder="Izena" required /></div>
 										</div>
 										<div class="row uniform">
-											<div class="12u"><input type="text" name="abizenak" id="abizenak" placeholder="Abizenak" /></div>
+											<div class="12u"><input type="text" name="abizenak" id="abizenak" placeholder="Abizenak" required/></div>
 										</div>
 										<div class="row uniform">
-											<div class="12u"><input type="password" name="pasahitza1" id="pasahitza1" placeholder="Pasahitza" /></div>
+											<div class="12u"><input type="password" name="pasahitza1" id="pasahitza1" placeholder="Pasahitza" required/></div>
 										</div>
 										<div class="row uniform">
-											<div class="12u"><input type="password" name="pasahitza2" id="pasahitza2" placeholder="Sartu pasahitz berdina" /></div>
+											<div class="12u"><input type="password" name="pasahitza2" id="pasahitza2" placeholder="Sartu pasahitz berdina" onchange="pasahitzaKonprobatzen()" required/></div>
 										</div>
 										<div class="row uniform">
 											<div class="12u"><input type="text" name="eposta" id="eposta" placeholder="Eposta" /></div>
@@ -69,13 +70,14 @@
 										<div class="row uniform">
 											<div class="12u">
 												<ul class="actions">
-													<li><input type="submit" class="special" value="Erregistratu" /></li>
+													<li><input type="submit" id="registerbtn" class="special" value="Erregistratu"/></li>
 													<li><input type="reset" value="Reset" /></li>
 												</ul>
 											</div>
 										</div>
 									</form>
-									
+									<div id="mezua">
+									</div>
 								</div>
 							</section>
 

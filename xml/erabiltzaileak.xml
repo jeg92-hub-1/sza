@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <!DOCTYPE erabiltzaileak SYSTEM "erabiltzaileak.dtd">
 <erabiltzaileak>
 	<erabiltzailea id="jegana016">
@@ -13,4 +13,4 @@
 		<eposta>jesnaola010@ikasle.ehu.eus</eposta>
 		<pasahitza>1234asdf</pasahitza>
 	</erabiltzailea>
-</erabiltzaileak>
+<erabiltzailea id="jesnaola001"><izena>Joseba</izena><abizenak>Esnaola Albizuri</abizenak><pasahitza>asdf</pasahitza><eposta>jesnaola001@ikasle.ehu.eus</eposta></erabiltzailea></erabiltzaileak>
