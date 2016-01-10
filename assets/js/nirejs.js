@@ -32,6 +32,32 @@ function liburuakIkusi(){
 	XMLHttpRequestObject.send();
 }
 
+//Pasahitz sinplea ez erregistratzeko zerbitzu bat egin
+//o = pasahitz egokia eta g = pasahitz desegokia
+function pasahitzaBalidatu(pasahitza){
+	if(pasahitza.value != ""){
+		XMLHttpRequestObject.onreadystatechange=function(){
+			if ((XMLHttpRequestObject.readyState==4)&&(XMLHttpRequestObject.status==200)){	
+				var string=XMLHttpRequestObject.responseText;
+				var erantzuna = string.split("&&&");
+				$(document).ready( function() {$('#mezua').delay(1000).fadeIn();});	
+				if(erantzuna[1] == 'o'){
+					document.getElementById("mezua").innerHTML  = erantzuna[0];
+					$(document).ready( function() {$('#mezua').delay(1000).fadeOut();});
+					document.getElementById("pasahitza2").disabled= false;
+				}else{		
+					document.getElementById("mezua").innerHTML = erantzuna[0];
+					$(document).ready( function() {$('#mezua').delay(1000).fadeOut();});
+					document.getElementById("pasahitza2").disabled= true;
+				}
+			}
+		}
+		
+		XMLHttpRequestObject.open("GET", "service/pasahitzaKonprobatu.php?PASAHITZA="+pasahitza.value, true);
+		XMLHttpRequestObject.send();	
+	}
+}
+
 //Liburu bat sartu aurretik konprobatu ea sartu nahi den ISBN aurretik XML fitxategian existitzen den
 //Existitzen ez bada -> XML-n sartu
 //Existitzen da -> mezu bat itzuli existitzen dela jakinaraziz.
@@ -61,6 +87,7 @@ function isbnKonprobatzen(isbn,resetEmanDa){
 	}
 }
 
+//Liburua berri bat sartzeko
 function sartuLiburua(){
 	var isbn=document.getElementById('isbn').value;
 	var hizkuntza=document.getElementById('hizkuntza');
@@ -121,6 +148,7 @@ function liburuaBaloratu(){
 	XMLHttpRequestObject.send("selectedLiburua="+selectedLiburua+"&balorazioa="+balorazioa);
 }
 
+//Erabiltzaile bat erregistratu aurretik konprobatu ea aurretik nick hori existitzen den.
 function nickaKonprobatu(nick){
 	if(nick.value != ""){
 		XMLHttpRequestObject.onreadystatechange=function(){
@@ -150,6 +178,7 @@ function nickaKonprobatu(nick){
 	}
 }
 
+//1go eta 2. pasahitzak berdinak izan behar dira. Mezu baten bidez adierazi.
 function pasahitzaKonprobatzen(){
 	var pasahitza1 = document.getElementById('pasahitza1').value;	
 	var pasahitza2 = document.getElementById('pasahitza2').value;
@@ -165,8 +194,7 @@ function pasahitzaKonprobatzen(){
 	}
 }
 
-
-
+//Erabiltzaile bat erregistratzeko
 function erregistratu(){
 	var nick=document.getElementById('nick').value;
 	var izena=document.getElementById('izena').value;
@@ -182,8 +210,9 @@ function erregistratu(){
 	XMLHttpRequestObject.open("POST", "php/register_prozesatu.php", true);
 	XMLHttpRequestObject.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	XMLHttpRequestObject.send("nick="+nick+"&izena="+izena+"&abizenak="+abizenak+"&pasahitza="+pasahitza+"&eposta="+eposta);
-	//XMLHttpRequestObject.send("nick="+nick+"&izena="+izena+"&abizenak"+abizenak+"&pasahitza="+pasahitza+"&eposta="+eposta);
 }
+
+
 //Logeatuta bazaude index.html ko menuak eskuragai ez egoteko eta alderantziz,
 // logeatuta egon ezean erabiltzaileak.htmlko menuak eskuragai ez egoteko
 /*
