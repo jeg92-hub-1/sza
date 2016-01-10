@@ -11,8 +11,10 @@
 	}else{
 		$balorazioa="";
 	}
-		$liburuak=simplexml_load_file('../xml/liburuak.xml');
 	
+	$liburuak=simplexml_load_file('../xml/liburuak.xml');
+	
+	if($liburuak){
 		$aurkitu=false;
 		foreach($liburuak->liburua as $lib){
 			if($lib['ISBN']==$isbn){
@@ -31,14 +33,19 @@
 					$lib->balorazioa['batazbestekoa'] = $balorazioa;
 					$lib->balorazioa->puntuazioa = $balorazioa;
 				}
-				$liburuak->asXML("../xml/liburuak.xml");
-				echo "Balorazioa egina";
+				$gordeDa = $liburuak->asXML("../xml/liburuak.xml");
+				if($gordeDa){
+					echo "Balorazioa egina";
+				}else{
+					echo "Errore bat egon da balorazioa gordetzerakoan!";
+				}
 			}
 		}
 		
 		if(!$aurkitu){
 			echo "Sartutako isbn ez da existitzen";
 		}
-	
-	
+	}else{
+		echo "XML kargatzerakoan errore bat egon da";
+	}
 ?>
