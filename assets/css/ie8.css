@@ -37,7 +37,7 @@
 		-moz-appearance: normal;
 		-webkit-appearance: normal;
 		-ms-appearance: normal;
-		appearance: normal;
+		/*appearance: normal;*/
 	}
 
 		input[type="checkbox"] + label,
